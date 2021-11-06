@@ -16,7 +16,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 const SingleProduct = ({ history, match }) => {
-  const [qty, setQty] = useState(0);
+  const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
@@ -31,7 +31,7 @@ const SingleProduct = ({ history, match }) => {
   return (
     <>
       <Link className="btn btn-light my-3" to="/">
-        {' '}
+        {/* {' '} */}
         Go Back
       </Link>
       {loading ? (
@@ -81,6 +81,7 @@ const SingleProduct = ({ history, match }) => {
                     </Col>
                   </Row>
                 </ListGroup.Item>
+
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <Row>
